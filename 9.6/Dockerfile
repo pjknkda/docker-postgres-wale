@@ -12,4 +12,4 @@ RUN set -x \
 
 # Use pip3.4 to avoid conflict with system pip3
 RUN pip3 install -U pip \
-    && pip3.4 install --no-cache-dir wal-e[azure]
+    && pip3.4 install --no-cache-dir wal-e[azure] azure-storage==0.20.3

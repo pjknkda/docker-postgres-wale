@@ -11,4 +11,4 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install -U pip \
-    && pip3 install --no-cache-dir wal-e[azure]
+    && pip3 install --no-cache-dir wal-e[azure] azure-storage==0.20.3
