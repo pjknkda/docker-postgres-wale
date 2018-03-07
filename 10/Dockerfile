@@ -3,12 +3,13 @@ FROM postgres:10
 
 RUN set -x \
     && apt-get update && apt-get install -y --no-install-recommends \
+        git \
+        lzop \
         python3 \
         python3-pip \
         python3-setuptools \
-        lzop \
         pv \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install -U pip \
-    && pip3 install --no-cache-dir wal-e[azure] azure-storage==0.20.3
+    && pip3 install --no-cache-dir "git+https://github.com/pjknkda/wal-e.git@v1.1.1b3#egg=wal-e[azure]"
