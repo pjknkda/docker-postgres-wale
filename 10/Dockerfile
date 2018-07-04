@@ -11,5 +11,5 @@ RUN set -x \
         pv \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install -U pip \
-    && pip3 install --no-cache-dir "git+https://github.com/pjknkda/wal-e.git@v1.1.1b3#egg=wal-e[azure]"
+RUN python3 -m pip install -U pip \
+    && python3 -m pip --no-cache-dir "git+https://github.com/pjknkda/wal-e.git@v1.1.1b3#egg=wal-e[azure]"
