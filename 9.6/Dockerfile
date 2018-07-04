@@ -11,6 +11,6 @@ RUN set -x \
         pv \
     && rm -rf /var/lib/apt/lists/*
 
-# Use pip3.4 to avoid conflict with system pip3
-RUN pip3 install -U pip \
-    && pip3.4 install --no-cache-dir "git+https://github.com/pjknkda/wal-e.git@v1.1.1b3#egg=wal-e[azure]"
+# Use python3.4 to avoid conflict with system version
+RUN python3 -m pip install -U pip \
+    && python3 -m pip install --no-cache-dir "git+https://github.com/pjknkda/wal-e.git@v1.1.1b3#egg=wal-e[azure]"
